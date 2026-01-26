@@ -1,11 +1,46 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
+import Wrapper from '../components/wrapper'
+import Layout from '../layouts/Layout.astro'
+import Hello from '../components/Hello'
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<Welcome />
+  <div
+    class='md:flex flex-wrap lg:flex-nowrap overflow-hidden lg:h-screen w-screen'
+  >
+    <div
+      class='w-full lg:w-5/12 lg:h-screen flex flex-wrap lg:flex-col lg:flex-nowrap shrink-0'
+    >
+      <div
+        class='bg-primary text-light lg:text-light px-8 py-12 lg:py-3 flex flex-col justify-center w-full lg:h-full'
+      >
+        <Hello client:load />
+      </div>
+      <div
+        class='bg-light h-[60px] lg:h-[100px] flex items-center text-xl gap-2 px-8 w-full md:w-1/2 lg:w-full'
+      >
+        <a
+          href='mailto:annalisa@antonioli.dev'
+          target='_blank'
+          class='text-xl text-primary font-mono wavy inline-block'
+        >
+          Write me an email</a
+        >
+      </div>
+      <div
+        class='bg-accent h-[60px] lg:h-[100px] flex items-center md:justify-end text-xl gap-2 px-8 w-full md:w-1/2 lg:w-full'
+      >
+        <a
+          href='mailto:annalisa@antonioli.dev'
+          target='_blank'
+          class='text-xl text-light font-mono wavy primary inline-block'
+        >
+          Schedule a quick call</a
+        >
+      </div>
+    </div>
+    <Wrapper client:idle />
+  </div>
 </Layout>
