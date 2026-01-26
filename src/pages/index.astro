@@ -32,13 +32,29 @@ import Hello from '../components/Hello'
       <div
         class='bg-accent h-[60px] lg:h-[100px] flex items-center md:justify-end text-xl gap-2 px-8 w-full md:w-1/2 lg:w-full'
       >
-        <a
+        <!-- <a
           href='mailto:annalisa@antonioli.dev'
           target='_blank'
           class='text-xl text-light font-mono wavy primary inline-block'
         >
           Schedule a quick call</a
+        > -->
+        <!-- Calendly link widget begin -->
+        <link
+          href='https://assets.calendly.com/assets/external/widget.css'
+          rel='stylesheet'
+        />
+        <script
+          src='https://assets.calendly.com/assets/external/widget.js'
+          type='text/javascript'
+          async></script>
+        <a
+          href=''
+          class='text-xl text-light font-mono wavy primary inline-block'
+          onclick="Calendly.initPopupWidget({url: 'https://calendly.com/annalisa-antonioli/30min'});return false;"
+          >Schedule a quick call</a
         >
+        <!-- Calendly link widget end -->
       </div>
     </div>
     <Wrapper client:idle />

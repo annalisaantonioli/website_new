@@ -3,7 +3,7 @@ import { ArrowArcLeftIcon } from "@phosphor-icons/react";
 import { AnimatePresence, motion } from "motion/react";
 
 
-import projects from '../../../public/projects.json'
+import projects from '../../projects.json'
 
 
 export default function Projects({ open, setOpen }: { open: boolean, setOpen: (value: (prev: boolean) => boolean) => void }) {
