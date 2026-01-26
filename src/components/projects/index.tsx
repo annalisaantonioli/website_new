@@ -11,7 +11,7 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
     setOpen((prev: boolean) => !prev);
   }
   const isDesk = useMediaQuery('(min-width: 1024px)');
-  const isMob = useMediaQuery('(max-width: 768px)');
+  const isMob = useMediaQuery('(max-width: 767px)');
   console.log("Wis", isMob)
   const variants = {
     open: { width: isDesk ? '60%' : '100%' },
