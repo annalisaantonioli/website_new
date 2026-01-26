@@ -68,7 +68,7 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
               opacity: isMob ? 1 : 0
             }}
             animate={{
-              maxHeight: isMob ? '100vh' : 'auto',
+              maxHeight: isMob ? '800vh' : 'auto',
               opacity: 1,
               transition: {
                 maxHeight: { duration: isMob ? 0.6 : 0, ease: [0.4, 0, 0.2, 1] },

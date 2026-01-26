@@ -9,6 +9,7 @@ import Projects from '../projects';
 
 export default function Wrapper() {
   const [open, setOpen] = useState(false)
+  const [show, setShow] = useState(true)
   return (
     <>
       <motion.div
@@ -22,20 +23,24 @@ export default function Wrapper() {
         className="fixed top-0 right-0 w-1/2 h-full bg-accent z-50 border border-l-[30px] border-secondary"
         initial={{ x: 0 }}
         animate={{ x: "100%" }}
+        onAnimationEnd={() => setShow(false)}
         transition={{ duration: 0.8, delay: 0.5, ease: [0.76, 0, 0.24, 1] }}
       />
-      <motion.div
-        initial={{ opacity: 1 }}
-        animate={{ opacity: 0 }}
-        transition={{ duration: 0.8, delay: 1, ease: [0.76, 0, 0.24, 1] }}
-        className="fixed w-[80%] h-full lg:w-[20%] top-0 left-1/2 z-49 top-1/2 -translate-y-1/2 -translate-x-1/2"
-      >
-        <DotLottieReact
-          src="/pigeon.json"
-          loop
-          autoplay
-        />
-      </motion.div>
+      {show &&
+        <motion.div
+          initial={{ opacity: 1 }}
+          animate={{ opacity: 0 }}
+          onAnimationComplete={() => setShow(false)}
+          transition={{ duration: 0.8, delay: 1.5, ease: [0.76, 0, 0.24, 1] }}
+          className="fixed w-[80%] h-full lg:w-[20%] top-0 left-1/2 z-49 top-1/2 -translate-y-1/2 -translate-x-1/2"
+        >
+          <DotLottieReact
+            src="/pigeon.json"
+            loop
+            autoplay
+          />
+        </motion.div>
+      }
       <Projects setOpen={() => setOpen(!open)} open={open} />
       <div
         // initial={false}
