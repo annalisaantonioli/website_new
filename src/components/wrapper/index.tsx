@@ -52,7 +52,7 @@ export default function Wrapper() {
         // }}
         className=' flex  flex flex-col bg-light lg:shrink-0 grow md:w-0 lg:w-[50%] '>
         {/* <Monitor isOn={false} /> */}
-        <div className='bg-accent md:bg-primary lg:bg-accent w-full h-[60vh] flex flex-col  justify-center px-8 text-light overflow-hidden'>
+        <div className='bg-accent md:bg-primary lg:bg-accent w-full md:py-10 lg:py-0 lg:h-[60vh] flex flex-col  justify-center px-8 text-light overflow-hidden'>
 
           <div className='lg:max-w-[500px] w-full py-6 md:pr-10' >
             <h2 className='font-heading text-3xl text-light  mb-4'>What can I do for you.</h2>
@@ -103,7 +103,7 @@ export default function Wrapper() {
         </div>
         <div className=' px-8 pb-3 bg-light w-full'>
 
-          <div className='flex flex-col lg:flex-row gap-4 justify-between font-mono items-center py-4 flex-wrap'>
+          <div className='flex flex-col md:flex-row gap-4 justify-between font-mono items-center lg:py-4 flex-wrap'>
 
             <p className='flex items-center gap-1 lg:w-5/12 xl:w-[auto]'><PhoneCallIcon size={24} className='text-secondary shrink-0' />+39 379 209 60 63 </p>
             <p className='flex items-center gap-1 '><EnvelopeIcon size={24} className='text-accent shrink-0' />annalisa@antonioli.dev</p>
@@ -114,7 +114,7 @@ export default function Wrapper() {
             </div>
           </div>
         </div>
-        <span className='text-xs px-8 py-1 inline-block text-center md:text-right'>Copyright© {new Date().getFullYear()} | p.iva 11831300014</span>
+        <span className='text-xs px-8 py-1 inline-block text-center lg:text-right'>Copyright© {new Date().getFullYear()} | p.iva 11831300014</span>
       </div >
     </>
   )
