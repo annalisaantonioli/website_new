@@ -28,7 +28,7 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
         delay: open ? 0.4 : 0.9,
         ease: [0, 0.71, 0.2, 1.01],
       }}
-      className={`bg-secondary relative overflow-hidden shrink-0 py-6 md:py-0 w-full md:w-[130px]  border border-4 border-red-800`}>
+      className={`bg-secondary relative overflow-hidden shrink-0 py-6 md:py-0 w-full md:w-[130px]`}>
 
       <motion.div
         onClick={handleToggle}
