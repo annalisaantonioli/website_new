@@ -146,7 +146,7 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
                         <span className='font-mono !mb-0 font-bold text-primary inline-block  link-normal relative group-hover:after:scale-x-100'>{el.name},{el.year} <span className='text-accent'>@ </span>{el.agency}</span>
                         <span className='group-hover:-scale-x-100'>👀</span>
                       </a> :
-                      <a href={`mailto:annalisa@antonioli.dev?subject=More%20info&body=Hi%20Annalisa!I'd%20like%20to%20learn%20more%20about%20${el.name}`}>
+                      <a target='_blank' className='flex items-center gap-2 group' href={`mailto:annalisa@antonioli.dev?subject=More%20info%20about%20${el.name}&body=Hi%20Annalisa!I'd%20like%20to%20learn%20more about this project!`}>
                         <span className='font-mono !mb-0 font-bold text-primary inline-block  link-normal relative group-hover:after:scale-x-100'>{el.name},{el.year} <span className='text-accent'>@ </span>{el.agency}</span>
                         <span className='group-hover:-scale-x-100'>📫</span>
                       </a>}
