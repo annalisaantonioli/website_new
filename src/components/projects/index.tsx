@@ -146,9 +146,10 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
                         <span className='font-mono !mb-0 font-bold text-primary inline-block  link-normal relative group-hover:after:scale-x-100'>{el.name},{el.year} <span className='text-accent'>@ </span>{el.agency}</span>
                         <span className='group-hover:-scale-x-100'>👀</span>
                       </a> :
-                      <p className='!mb-0'>
-                        <span className='font-mono !mb-0 font-bold text-primary'>{el.name},{el.year}</span>
-                      </p>}
+                      <a href={`mailto:annalisa@antonioli.dev?subject=More%20info&body=Hi%20Annalisa!I'd%20like%20to%20learn%20more%20about%20${el.name}`}>
+                        <span className='font-mono !mb-0 font-bold text-primary inline-block  link-normal relative group-hover:after:scale-x-100'>{el.name},{el.year} <span className='text-accent'>@ </span>{el.agency}</span>
+                        <span className='group-hover:-scale-x-100'>📫</span>
+                      </a>}
                   </li>
                 )}
               </ul>
