@@ -150,6 +150,8 @@ export default function Projects({ open, setOpen }: { open: boolean, setOpen: (v
                         <span className='font-mono !mb-0 font-bold text-primary inline-block  link-normal relative group-hover:after:scale-x-100'>{el.name},{el.year} <span className='text-accent'>@ </span>{el.agency}</span>
                         <span className='group-hover:-scale-x-100'>📫</span>
                       </a>}
+                    <p className='text-xs'>{el.description} {el.more_info && <a href={el.more_info} className='underline' target='_blank'>👉 More info 👈</a>}</p>
+
                   </li>
                 )}
               </ul>
